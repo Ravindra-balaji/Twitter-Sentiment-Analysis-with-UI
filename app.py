@@ -10,11 +10,11 @@ with open("model.pkl", "rb") as f:
     model = pickle.load(f)
 
 # Load your Word2Vec model
-word2vec = gensim.models.Word2Vec.load("word2vec.model")
+word2vec = gensim.models.Word2Vec.load("word2vec.pkl")
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("Twitter UI.html")
 
 @app.route("/predict", methods=["POST"])
 def predict():
